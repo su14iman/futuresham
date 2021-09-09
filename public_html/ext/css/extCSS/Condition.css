@@ -1,0 +1,91 @@
+#SliderHomePageTitleView , #itemNewsTitleView{
+    text-align: center;
+}
+
+
+#itemNewsImageView{
+    width: 90%; height: 360px;
+}
+
+
+
+
+  #AppContactWidth{
+        width: 50%;
+    }
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .headerColList ul li div[pid='11']{
+    margin-bottom: 18%;
+   }
+  
+
+    #itemNewsImageView{
+    width: 100%; height: 100%;
+    }
+     #AppContactWidth{
+        width: 100%;
+    }
+
+    #BarsMON span{
+        margin: 5%;
+    }
+
+    #headerList{
+    	display: none;
+    	cursor: pointer;
+    }
+
+    .headerColLogo{
+    	text-align: center;
+    }
+
+    #menuKey{
+    	text-align: right;
+    	display: block;
+    }
+
+    #menuKey a img{
+    	    margin-right: 5%;
+		    position: fixed;
+		    z-index: 100;
+		    top: 22px;
+		    right: 0;
+		    background-color: #9C528B;
+		    padding: 2%;
+		    border-radius: 5px;
+    }
+
+    #Bars1Scroll{
+    	width: 80%;
+    }
+    #Bars2Scroll{
+    	width: 80%;
+    }
+    footer span{
+
+    	float: none;
+    }
+
+    .soc{
+        margin-top: -4%;
+    }
+
+
+
+
+    
+
+
+}
+
+
+@font-face {
+    font-family: '__JF Flat_5';
+    src: url('../font/jf-flat-regular.woff');
+}

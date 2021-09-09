@@ -1,0 +1,71 @@
+
+
+.ScrollUp{
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    background: #333;
+    padding: 1%;
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.ScrollUp a{
+	right: 150px;
+    bottom: 20px;
+    z-index: 1000;
+    color: #fff;
+    font-family: '__JF Flat_5';
+    text-decoration: none;
+}
+
+
+
+
+
+footer{
+	position: relative;
+	left: 0;
+	bottom: 0;
+	background-color: #9C528B;
+	width: 100%;
+	height: 144px;
+	padding-top: 4px;
+}
+
+
+footer .soc{
+	margin-top: 0%;
+}
+
+footer .soc a{
+	margin-right: 2%;
+}
+
+footer .soc p{
+	color:#fff;
+	margin-bottom: 4%;
+	margin-top: 0px;
+	font-size: 10px;
+	margin-top: 1%;
+}
+
+footer span {
+	float: left;
+}
+
+footer span p{
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 3%;
+	margin-top: -3%;
+}
+
+
+

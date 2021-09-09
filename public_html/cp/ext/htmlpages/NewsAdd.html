@@ -1,0 +1,173 @@
+<style type="text/css">
+	
+#FormDiv{
+
+}
+
+formm{
+	text-align: center;
+
+}
+
+formm div {
+	width: 70%;
+	margin: auto;
+	background-color: #fdfdfd;
+	padding: 2% 2% 2% 4%;
+	box-shadow: 0px 0px 1px 0px;
+	text-align: left;
+}
+
+formm div label{
+	float: left;
+	margin-left: -2%;
+	margin-top: 2%;
+}
+
+formm div input{
+	width: 100%;
+}
+
+formm div textarea{
+	width: 100%;
+}
+
+
+formm div select{
+	width: 100%;
+}
+
+
+
+
+
+formm div input[type="submit"]{
+	width: 40%;
+	padding: 2%;
+	background-color: #01cb78;
+	color:#fff;
+	cursor: pointer;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.9/adapters/jquery.js"></script>
+
+
+		<div style="width: 70%; margin: auto; background-color: #fdfdfd; padding: 2% 2% 2% 4%; box-shadow: 0px 0px 1px 0px; text-align: left;">
+			
+			<h3 id="Resulte" style="color:#01cb78; display: none;">Has be add .. </h3>
+		</div>
+
+<div id="FormDiv">
+	<formm>
+		
+
+
+
+		<div>
+			<label>
+				Title:
+			</label><br>
+			<input id="AddNewTitle" type="text" placeholder="Enter Title .." name="AddSoftwareName">
+		</div>
+
+
+		<div>
+			<label>
+				Summary:
+			</label><br>
+			<input id="AddNewSummary" type="text" placeholder="Enter Summary .." name="AddSoftwareName">
+		</div>
+
+		
+		<div>
+
+
+			
+			<!-- <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script> -->
+
+			<textarea id="AddNewBodyHTML" name="AddNewBodyHTML" placeholder="Enter BodyHTML here .. ">
+				
+			</textarea>
+		</div>
+		
+
+		<div>
+			<label>
+				Image:
+			</label><br>
+			<input id="AddNewImage" type="url" placeholder="Enter Image Url ... " name="AddSoftwareURL">
+		</div>
+
+
+		<div>
+			<label>
+				Type:
+			</label><br>
+			<select id="AddNewType">
+				<option value="Sport">Sport</option>
+				<option value="Syria">Syria</option>
+				<option value="Technology">Technology</option>
+			</select>
+		</div>
+
+
+		<div style=" text-align: center; ">
+			<input onclick="AddData()" type="submit" value="Add" name="">
+		</div>
+
+
+
+	</formm>
+</div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+	//#Resulte
+
+	function AddData(){
+		var AddNewTitle = $("#AddNewTitle").val();
+		var AddNewSummary = $("#AddNewSummary").val();
+		var AddNewBodyHTML = CKEDITOR.instances['AddNewBodyHTML'].getData();
+		var AddNewImage = $("#AddNewImage").val();
+		var AddNewType = $("#AddNewType").val();
+
+			if(AddNewTitle !=='' && AddNewSummary !=='' && AddNewBodyHTML !=='' && AddNewImage !=='' && AddNewType !==''){
+					
+				
+				$.post('./json.php', {AddNewTitle:AddNewTitle,AddNewSummary:AddNewSummary,AddNewBodyHTML:AddNewBodyHTML,AddNewImage:AddNewImage,AddNewType:AddNewType}, function(c) {
+					var status = c.AddNewsManually['status'];
+						if(status == "ok"){
+							$("#Resulte").show();
+							$("#Resulte").text('has be add .. ');
+							$("#Resulte").css({color: 'green'});
+							$("#AddNewTitle").val('');
+							$("#AddNewSummary").val('');
+							$("#AddNewBodyHTML").val('');
+							$("#AddNewImage").val('');
+							$("#AddNewType").val('');
+						}else{
+							$("#Resulte").show();
+							$("#Resulte").text('Error');
+							$("#Resulte").css({color: 'red'});	
+						}
+				},'json');
+				
+			}else{
+				// alert('Error');
+
+				$("#Resulte").show();
+				$("#Resulte").text('Error');
+				$("#Resulte").css({color: 'red'});
+			}	
+	}
+	
+
+	// alert('page readey :)) ');
+
+	CKEDITOR.replace( 'AddNewBodyHTML' );
+</script>
+

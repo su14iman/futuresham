@@ -1,0 +1,132 @@
+
+
+<style type="text/css">
+	
+#FormDiv{
+
+}
+
+formm{
+	text-align: center;
+
+}
+
+formm div {
+	width: 70%;
+	margin: auto;
+	background-color: #fdfdfd;
+	padding: 2% 2% 2% 4%;
+	box-shadow: 0px 0px 1px 0px;
+	text-align: left;
+}
+
+formm div label{
+	float: left;
+	margin-left: -2%;
+	margin-top: 2%;
+}
+
+formm div input{
+	width: 100%;
+}
+
+
+
+
+
+formm div input[type="submit"]{
+	width: 40%;
+	padding: 2%;
+	background-color: #01cb78;
+	color:#fff;
+	cursor: pointer;
+}
+
+</style>
+
+
+		<div style="width: 70%; margin: auto; background-color: #fdfdfd; padding: 2% 2% 2% 4%; box-shadow: 0px 0px 1px 0px; text-align: left;">
+			<button style="background-color:#4380b8; /*float: left;*/ margin:2%; color:#fff;" onclick="Goback()"><i class="fa fa-caret-square-o-left	"></i>   Go back</button>
+			<h3 style="color:#01cb78; display: none;">Has be add .. </h3>
+		</div>
+
+<div id="FormDiv">
+	<formm>
+		
+
+
+
+		<div>
+			<label>
+				Name:
+			</label><br>
+			<input type="text" placeholder="Enter name .." name="AddSoftwareName">
+		</div>
+
+		
+		<div>
+			<label>
+				Description:
+			</label><br>
+			<input type="text" placeholder="Enter description ... " name="AddSoftwareDescription">
+		</div>
+		
+		<div>
+			<label>
+				URL:
+			</label><br>
+			<input type="url" placeholder="Enter Url ... " name="AddSoftwareURL">
+		</div>
+
+
+		<div style=" text-align: center; ">
+			<input onclick="AddData()" type="submit" value="Add" name="">
+		</div>
+
+
+
+	</formm>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	
+	function Goback(){
+		window.location.href = window.location.href.replace('?action=Add',' ');
+
+		// alert(window.location.href.replace('?action=Add',' '));
+		return false;
+	}
+
+
+
+
+
+	function AddData(){
+		var AddSoftwareName = $('input[name="AddSoftwareName"]').val();
+		var AddSoftwareDescription = $('input[name="AddSoftwareDescription"]').val();
+		var AddSoftwareURL = $('input[name="AddSoftwareURL"]').val();
+			if(AddSoftwareName !== '' && AddSoftwareDescription !=='' && AddSoftwareURL !==''){
+				$.post("./json.php",{AddSoftwareName:AddSoftwareName,AddSoftwareDescription:AddSoftwareDescription,AddSoftwareURL:AddSoftwareURL},function(c){
+						var r = c.SoftwareAdd['status'];
+						if(r == 'ok'){
+							$('input[name="AddSoftwareName"]').val('');
+							$('input[name="AddSoftwareDescription"]').val('');
+							$('input[name="AddSoftwareURL"]').val('');
+							alert('Data entered successfully :)) ');
+						}else{
+							alert('Something went wrong :// ');
+						}
+				},"json");
+			}else{
+				$("formm div input").css("border","1px solid red");
+			}
+
+	}
+
+
+
+</script>

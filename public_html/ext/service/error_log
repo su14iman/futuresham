@@ -1,0 +1,32 @@
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 150
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 162
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 168
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 180
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 187
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_DB has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 191
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 331
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 488
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 599
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 626
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_DB has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 743
+[18-May-2018 07:29:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 768
+[18-May-2018 07:29:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ereg() in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 9
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 150
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 162
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 168
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 180
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_SQLite has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 187
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_DB has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 191
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 331
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 488
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 599
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 626
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_DB has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 743
+[18-May-2018 07:29:04 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Min_Result has a deprecated constructor in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 768
+[18-May-2018 07:29:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ereg() in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/fcmkrra0lyr4/futuresham.com/ext/service/sql.php on line 9

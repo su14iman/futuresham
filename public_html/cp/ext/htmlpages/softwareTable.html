@@ -1,0 +1,102 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<button onclick="AddNew()">Add new software</button>
+
+<h2>Software List:</h2>
+
+<table id="SoftwareContactHere">
+  <tr>
+    <th>ID</th>
+    <th>Software Name</th>
+    <th>Date Add</th>
+    <th>Action</th>
+  </tr>
+
+
+<!-- <div id="SoftwareContactHere"> -->
+  
+<!--     <tr>
+    <td>1</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td style="text-align: center;">
+      <a href="#">
+        <i style="color:red;" class="fa fa-remove"></i>
+      </a>
+    </td>
+  </tr> -->
+
+
+
+
+<!-- </div> -->
+
+
+
+
+</table>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+ 
+    function SoftwareRemove(id){
+      // alert(id);
+          $.post("./json.php",{SoftwareRemove:id},function(c){
+                var status = c.SoftwareRemove['status'];
+                if(status == 'ok'){
+                  $("[ssid='"+id+"'").remove();
+                }else{
+                  alert('Something went wrong ://');
+                }
+           
+          },"json");
+          return false;
+    }
+
+   function SoftwareGetContact(){
+      // alert('a');
+    $.post("./json.php",{SoftwareSelectAll:1},function(c){
+      // console.log(c);
+    $.each(c.SoftwareSelectAll, function (i, va) {
+
+        var id = va.ID;
+        var name = va.name;
+        var timeAdd = va.timeAdd;
+        // alert(i);
+
+      var i = '<tr ssid="'+id+'"> <td>'+id+'</td> <td>'+name+'</td> <td>'+timeAdd+'</td> <td style="text-align: center;"> <a onclick="SoftwareRemove('+id+')" > <i style="color:red;" class="fa fa-remove"></i> </a> </td> </tr>';
+      $("#SoftwareContactHere").append(i);
+    }); // End each ..
+  },"json");
+    return false;
+  }
+
+
+  function AddNew(){
+   window.location.href = window.location.href+'?action=Add';
+   return false;
+  }
+
+
+   SoftwareGetContact();
+</script>
